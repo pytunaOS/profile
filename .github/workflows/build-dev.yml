@@ -1,11 +1,11 @@
-name: Build pytunaOS (stable)
+name: Build pytunaOS (dev)
 on:
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/stable'
+    if: github.ref == 'refs/heads/development'
     permissions:
       contents: write
     steps:
@@ -20,15 +20,15 @@ jobs:
           SUFFIX=""
           COUNT=0
 
-          while git rev-parse "stable-${BASE_DATE}${SUFFIX}" >/dev/null 2>&1; do
+          while git rev-parse "dev-${BASE_DATE}${SUFFIX}" >/dev/null 2>&1; do
             COUNT=$((COUNT + 1))
             SUFFIX="-${COUNT}"
           done
 
           VERSION="${BASE_DATE}${SUFFIX}"
 
-          echo "TAG_NAME=stable-${VERSION}" >> "$GITHUB_ENV"
-          echo "RELEASE_NAME=pytunaOS (STABLE) ${VERSION}" >> "$GITHUB_ENV"
+          echo "TAG_NAME=dev-${VERSION}" >> "$GITHUB_ENV"
+          echo "RELEASE_NAME=pytunaOS (DEV) ${VERSION}" >> "$GITHUB_ENV"
 
       - name: Pull Arch Linux container
         run: docker pull archlinux:latest
@@ -58,7 +58,7 @@ jobs:
       - name: Upload ISO Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: pytunaOS
+          name: pytunaOS-dev
           path: |
             ${{ github.workspace }}/iso/*.iso
             ${{ github.workspace }}/iso/SHA256SUMS
@@ -68,7 +68,7 @@ jobs:
         with:
           tag_name: ${{ env.TAG_NAME }}
           name: ${{ env.RELEASE_NAME }}
-          prerelease: false
+          prerelease: true
           generate_release_notes: true
           files: |
             ${{ github.workspace }}/iso/*.iso
