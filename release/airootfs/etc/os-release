@@ -1,0 +1,7 @@
+NAME="pytunaOS"
+PRETTY_NAME="pytunaOS"
+ID=pytuna
+BUILD_ID=development
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://github.com/askell091/pytunaOS"
+LOGO=pytuna-logo

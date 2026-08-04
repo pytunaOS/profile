@@ -1,0 +1,63 @@
+# the base, duh :|
+base
+
+# kernel and initramfs
+linux
+linux-headers
+linux-firmware
+mkinitcpio
+mkinitcpio-archiso
+
+# network
+networkmanager
+iwd
+
+# zram
+zram-generator
+
+# utilities
+sudo
+nano
+less
+tzdata
+zstd
+
+# boot things
+memtest86+
+memtest86+-efi
+edk2-shell
+syslinux
+efibootmgr
+
+# cryptography and certificates
+cryptsetup
+ca-certificates
+ca-certificates-utils
+
+# filesystem
+e2fsprogs
+dosfstools
+exfatprogs
+
+# hardware
+usbutils
+sof-firmware
+amd-ucode
+intel-ucode
+
+# user interface
+#xdg-utils
+
+# to be added
+#vscode
+#steam
+#vulkan, wine, mesa, etc
+#wayland and etc
+#niri and dotfiles
+#minimal gnu or something else suite (will be necessary, or really not)
+#docker
+#alacritty
+#gedit
+#maybe a meta package for the interface?
+#bluez
+#bluez-utils
