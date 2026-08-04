@@ -1,0 +1,75 @@
+name: Build pytunaOS (stable)
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/stable'
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set release information
+        run: |
+          BASE_DATE=$(date +'%Y.%m.%d')
+          SUFFIX=""
+          COUNT=0
+
+          while git rev-parse "stable-${BASE_DATE}${SUFFIX}" >/dev/null 2>&1; do
+            COUNT=$((COUNT + 1))
+            SUFFIX="-${COUNT}"
+          done
+
+          VERSION="${BASE_DATE}${SUFFIX}"
+
+          echo "TAG_NAME=stable-${VERSION}" >> "$GITHUB_ENV"
+          echo "RELEASE_NAME=pytunaOS (STABLE) ${VERSION}" >> "$GITHUB_ENV"
+
+      - name: Pull Arch Linux container
+        run: docker pull archlinux:latest
+
+      - name: Build ISO
+        run: |
+          docker run --rm \
+            --privileged \
+            -v "${{ github.workspace }}:/work" \
+            archlinux:latest \
+            bash -c '
+              set -euo pipefail
+              pacman -Syu --noconfirm
+              pacman -S --noconfirm archiso git
+              cd /work
+              mkdir -p iso
+              mkarchiso \
+                -v \
+                -r \
+                -w /tmp/pytuna \
+                -o iso \
+                release
+              cd iso
+              sha256sum *.iso > SHA256SUMS
+            '
+
+      - name: Upload ISO Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytunaOS
+          path: |
+            ${{ github.workspace }}/iso/*.iso
+            ${{ github.workspace }}/iso/SHA256SUMS
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: ${{ env.RELEASE_NAME }}
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            ${{ github.workspace }}/iso/*.iso
+            ${{ github.workspace }}/iso/SHA256SUMS
