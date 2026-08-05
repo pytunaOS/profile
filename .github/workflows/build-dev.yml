@@ -50,7 +50,7 @@ jobs:
                 -r \
                 -w /tmp/pytuna \
                 -o iso \
-                release
+                .
               cd iso
               sha256sum *.iso > SHA256SUMS
             '
