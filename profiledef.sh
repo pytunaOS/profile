@@ -9,7 +9,7 @@ iso_version="dev-$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="pytuna"
 buildmodes=('iso')
 bootmodes=('bios.syslinux'
-           'uefi-x64.grub.esp')
+           'uefi.grub')
 pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
 airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
