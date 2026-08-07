@@ -47,7 +47,20 @@ amd-ucode
 intel-ucode
 
 # user interface
-#xdg-utils
+ly
+niri
+noctalia
+#noctalia-greeter
+#pytuna-niri-noctalia
+xdg-utils
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-gnome
+xwayland-satellite
+
+# pytuna
+pytuna-keyring
+pytuna-mirrorlist
 
 # to be added
 #vscode
