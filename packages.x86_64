@@ -127,13 +127,10 @@ xl2tpd
 seatd
 
 # user interface
+pytuna-niri-noctalia
 niri
-plasma-desktop
+noctalia
 ly
-konsole
-kwrite
-dolphin
-ark
 
 # pytuna
 pytuna-keyring
