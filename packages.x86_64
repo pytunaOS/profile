@@ -47,16 +47,12 @@ amd-ucode
 intel-ucode
 
 # user interface
-ly
-niri
-noctalia
-#noctalia-greeter
-#pytuna-niri-noctalia
-xdg-utils
-xdg-desktop-portal
-xdg-desktop-portal-gtk
-xdg-desktop-portal-gnome
-xwayland-satellite
+plasma-desktop
+sddm
+konsole
+kwrite
+dolphin
+ark
 
 # pytuna
 pytuna-keyring
