@@ -126,25 +126,12 @@ xfsprogs
 xl2tpd
 seatd
 
-# user interface
+# pytuna
 niri
 noctalia
+nautilus
+brave-bin
 ly
-
-# pytuna
 pytuna-keyring
 pytuna-mirrorlist
 
-# to be added
-#vscode
-#steam
-#vulkan, wine, mesa, etc
-#wayland and etc
-#niri and dotfiles
-#minimal gnu or something else suite (will be necessary, or really not)
-#docker
-#alacritty
-#gedit
-#maybe a meta package for the interface?
-#bluez
-#bluez-utils
