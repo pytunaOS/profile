@@ -86,6 +86,9 @@ partclone
 parted
 partimage
 pcsclite
+pipewire
+pipewire-audio
+pipewire-pulse
 ppp
 pptpclient
 pv
@@ -118,6 +121,7 @@ vim
 virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
+wireplumber
 wireless_tools
 wpa_supplicant
 wvdial
