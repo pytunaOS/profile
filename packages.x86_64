@@ -127,8 +127,9 @@ xl2tpd
 seatd
 
 # pytuna
-niri
-noctalia
+pytuna-niri-noctalia
+pytuna-fastfetch-config
+pytuna-alacritty-config
 nautilus
 brave-bin
 ly
