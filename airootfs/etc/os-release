@@ -1,7 +1,7 @@
 NAME="pytunaOS"
-PRETTY_NAME="pytunaOS"
+PRETTY_NAME="pytunaOS GNU/Linux"
 ID=pytuna
-BUILD_ID=development
-ANSI_COLOR="38;2;23;147;209"
-HOME_URL="https://github.com/askell091/pytunaOS"
+BUILD_ID=dev-2026.8
+ANSI_COLOR="38;2;210;52;13"
+HOME_URL="https://github.com/pytunaOS"
 LOGO=pytuna-logo
