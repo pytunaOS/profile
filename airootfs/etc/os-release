@@ -1,7 +1,11 @@
 NAME="pytunaOS"
 PRETTY_NAME="pytunaOS GNU/Linux"
 ID=pytuna
-BUILD_ID=dev-2026.8
+
+VERSION="Development"
+VERSION_ID="dev"
+BUILD_ID="dev-2026.8"
+
 ANSI_COLOR="38;2;210;52;13"
 HOME_URL="https://github.com/pytunaOS"
 LOGO=pytuna-logo
