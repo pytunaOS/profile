@@ -183,7 +183,6 @@ terminus-font
 grml-zsh-config
 mc
 nano
-vim
 pv
 screen
 tmux
@@ -218,7 +217,8 @@ squashfs-tools
 # ============================================================
 # Desktop
 # ============================================================
-alacritty
+plasma-desktop
+konsole
 dolphin
 firefox
 sddm
@@ -227,6 +227,5 @@ sddm
 # PytunaOS Packages
 # ============================================================
 pytuna-fastfetch-config
-pytuna-alacritty-config
 pytuna-keyring
 pytuna-mirrorlist
