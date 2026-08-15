@@ -2,10 +2,10 @@
 # shellcheck disable=SC2034
 
 iso_name="pytuna"
-iso_label="PYTUNAOS_DEV_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m%d)"
+iso_label="PYTUNAOS_BETA_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m%d)"
 iso_publisher="pytunaOS <https://github.com/askell091/pytunaOS>"
 iso_application="pytunaOS Live DVD"
-iso_version="dev-$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
+iso_version="beta-$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="pytuna"
 buildmodes=('iso')
 bootmodes=('bios.syslinux'
