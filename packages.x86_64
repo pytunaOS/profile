@@ -200,6 +200,14 @@ irssi
 lynx
 
 # ============================================================
+# Repository keyrings and mirrors
+# ============================================================
+chaotic-keyring
+chaotic-mirrorlist
+pytuna-keyring
+pytuna-mirrorlist
+
+# ============================================================
 # Smart cards
 # ============================================================
 pcsclite
@@ -219,9 +227,7 @@ firefox
 sddm
 
 # ============================================================
-# PytunaOS Packages
+# pytunaOS Configuration Packages
 # ============================================================
 pytuna-fastfetch-config
 pytuna-calamares-config
-pytuna-keyring
-pytuna-mirrorlist
