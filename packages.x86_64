@@ -12,5 +12,7 @@ syslinux
 virtualbox-guest-utils-nox
 
 pytuna-base
+pytuna-edition-kde
 pytuna-live-environment
+pytuna-live-kde
 pytuna-calamares-config
