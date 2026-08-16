@@ -11,6 +11,7 @@ qemu-guest-agent
 syslinux
 virtualbox-guest-utils-nox
 
+squashfs-tools
 bcachefs-tools
 btrfs-progs
 dosfstools
