@@ -1,30 +1,17 @@
-# ============================================================
-# Base
-# ============================================================
 base
+cloud-init
+hyperv
 linux
-linux-firmware
 mkinitcpio
 mkinitcpio-archiso
-mkinitcpio-nfs-utils
-sudo
-systemd-resolvconf
-diffutils
-less
+open-vm-tools
+openssh
+pv
+qemu-guest-agent
+syslinux
+virtualbox-guest-utils-nox
 
-# ============================================================
-# CPU / Firmware
-# ============================================================
-amd-ucode
-intel-ucode
-linux-firmware-marvell
-sof-firmware
-b43-fwcutter
-broadcom-wl
-
-# ============================================================
-# Filesystems
-# ============================================================
+squashfs-tools
 bcachefs-tools
 btrfs-progs
 dosfstools
@@ -36,198 +23,21 @@ nilfs-utils
 ntfsprogs
 udftools
 xfsprogs
+rsync
 
-# ============================================================
-# Storage / RAID / LVM
-# ============================================================
 dmraid
 lvm2
 mdadm
 nbd
 
-# ============================================================
-# Disk / Partitioning
-# ============================================================
 fatresize
 gpart
 gptfdisk
 mtools
 parted
 
-# ============================================================
-# Recovery / Cloning
-# ============================================================
-clonezilla
-ddrescue
-fsarchiver
-partclone
-partimage
-testdisk
-
-# ============================================================
-# Disk utilities
-# ============================================================
-hdparm
-lsscsi
-mmc-utils
-nvme-cli
-sdparm
-sg3_utils
-smartmontools
-
-# ============================================================
-# Boot / UEFI
-# ============================================================
-efibootmgr
-edk2-shell
-grub
-memtest86+
-memtest86+-efi
-syslinux
-
-# ============================================================
-# Encryption / TPM / Security
-# ============================================================
-cryptsetup
-libfido2
-openpgp-card-tools
-sequoia-sq
-tpm2-tools
-tpm2-tss
-
-# ============================================================
-# Network
-# ============================================================
-bind
-dhcpcd
-dnsmasq
-ethtool
-iwd
-iw
-ldns
-ndisc6
-nmap
-tcpdump
-wireless-regdb
-wireless_tools
-wpa_supplicant
-
-# ============================================================
-# VPN / PPP
-# ============================================================
-openconnect
-openvpn
-ppp
-pptpclient
-vpnc
-wvdial
-xl2tpd
-
-# ============================================================
-# Network services / remote access
-# ============================================================
-darkhttpd
-lftp
-nfs-utils
-open-iscsi
-openssh
-rsync
-
-# ============================================================
-# Modems / USB
-# ============================================================
-modemmanager
-usb_modeswitch
-usbmuxd
-usbutils
-libusb-compat
-
-# ============================================================
-# Hardware / Virtualization
-# ============================================================
-bolt
-hyperv
-open-vm-tools
-qemu-guest-agent
-virtualbox-guest-utils-nox
-
-# ============================================================
-# Audio
-# ============================================================
-alsa-utils
-pipewire
-pipewire-audio
-pipewire-pulse
-wireplumber
-
-# ============================================================
-# Accessibility
-# ============================================================
-brltty
-espeakup
-
-# ============================================================
-# Console / Terminal
-# ============================================================
-foot-terminfo
-ghostty-terminfo
-gpm
-kitty-terminfo
-kmscon-terminfo
-rxvt-unicode-terminfo
-terminus-font
-
-# ============================================================
-# CLI tools
-# ============================================================
-grml-zsh-config
-mc
-nano
-pv
-screen
-tmux
-
-# ============================================================
-# Documentation
-# ============================================================
-man-db
-man-pages
-
-# ============================================================
-# Network applications
-# ============================================================
-irssi
-lynx
-
-# ============================================================
-# Repository keyrings and mirrors
-# ============================================================
-chaotic-keyring
-chaotic-mirrorlist
-pytuna-keyring
-pytuna-mirrorlist
-
-# ============================================================
-# Smart cards
-# ============================================================
-pcsclite
-
-# ============================================================
-# Archiso
-# ============================================================
-squashfs-tools
-
-# ============================================================
-# Desktop
-# ============================================================
-plasma-desktop
-konsole
-dolphin
-firefox
-sddm
-
-# ============================================================
-# pytunaOS Configuration Packages
-# ============================================================
-pytuna-fastfetch-config
+pytuna-base
+pytuna-edition-kde
+pytuna-live-environment
+pytuna-live-kde
 pytuna-calamares-config
