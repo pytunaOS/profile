@@ -23,6 +23,7 @@ nilfs-utils
 ntfsprogs
 udftools
 xfsprogs
+rsync
 
 dmraid
 lvm2
